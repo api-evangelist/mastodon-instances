@@ -10,10 +10,10 @@ image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: >-
   https://raw.githubusercontent.com/api-evangelist/mastodon-instances/refs/heads/main/apis.yml
 tags:
-  - Social
-  - Search
   - Fediverse
   - Mastodon
+  - Search
+  - Social
 created: '2024-12-02'
 modified: '2026-03-16'
 specificationVersion: '0.19'
@@ -21,9 +21,9 @@ apis:
   - aid: mastodon-instances:mastodon-instances
     name: Mastodon Instances API
     tags:
-      - Social
-      - Search
       - Mastodon
+      - Search
+      - Social
     humanURL: https://instances.social
     baseURL: https://instances.social/api
     properties:
