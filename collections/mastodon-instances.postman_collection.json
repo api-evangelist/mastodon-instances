@@ -1,0 +1,711 @@
+{
+  "item": [
+    {
+      "id": "c5d88752-c2de-4d32-938b-f09c3de7b888",
+      "name": "Get a random sample of instances",
+      "request": {
+        "name": "Get a random sample of instances",
+        "description": {},
+        "url": {
+          "path": [
+            "instances",
+            "sample"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "count",
+              "value": "20"
+            },
+            {
+              "disabled": false,
+              "key": "include_dead",
+              "value": "false"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3e087aa9-b3d9-4c28-ae73-3687e84ffccc",
+          "name": "A list of sampled instances.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "instances",
+                "sample"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "count",
+                  "value": "20"
+                },
+                {
+                  "key": "include_dead",
+                  "value": "false"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "12f81daf-be03-40f3-87f8-aa8f6e3196da",
+      "name": "List instances with rich filtering",
+      "request": {
+        "name": "List instances with rich filtering",
+        "description": {},
+        "url": {
+          "path": [
+            "instances",
+            "list"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "count",
+              "value": "20",
+              "description": "0 returns all instances."
+            },
+            {
+              "disabled": false,
+              "key": "include_dead",
+              "value": "false"
+            },
+            {
+              "disabled": false,
+              "key": "include_down",
+              "value": "true"
+            },
+            {
+              "disabled": false,
+              "key": "include_closed",
+              "value": "true"
+            },
+            {
+              "disabled": false,
+              "key": "supported_features",
+              "value": "<string>",
+              "description": "Comma-separated list of required features."
+            },
+            {
+              "disabled": false,
+              "key": "min_version",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "min_users",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "max_users",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "min_active_users",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "category",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "language",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "prohibited_content",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "prohibited_content",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "allowed_content",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "allowed_content",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "min_id",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "sort_by",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "sort_order",
+              "value": "asc"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "df02ecfd-d6ff-404f-a2b1-c92fd0148b7e",
+          "name": "A list of instances.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "instances",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "count",
+                  "value": "20"
+                },
+                {
+                  "key": "include_dead",
+                  "value": "false"
+                },
+                {
+                  "key": "include_down",
+                  "value": "true"
+                },
+                {
+                  "key": "include_closed",
+                  "value": "true"
+                },
+                {
+                  "key": "supported_features",
+                  "value": "<string>"
+                },
+                {
+                  "key": "min_version",
+                  "value": "<string>"
+                },
+                {
+                  "key": "min_users",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "max_users",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "min_active_users",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "key": "language",
+                  "value": "<string>"
+                },
+                {
+                  "key": "prohibited_content",
+                  "value": "<string>"
+                },
+                {
+                  "key": "prohibited_content",
+                  "value": "<string>"
+                },
+                {
+                  "key": "allowed_content",
+                  "value": "<string>"
+                },
+                {
+                  "key": "allowed_content",
+                  "value": "<string>"
+                },
+                {
+                  "key": "min_id",
+                  "value": "<string>"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "<string>"
+                },
+                {
+                  "key": "sort_order",
+                  "value": "asc"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c5ec5220-b75f-40ac-8478-d53a9a8ab8a5",
+      "name": "Search instances by name, topic, or description",
+      "request": {
+        "name": "Search instances by name, topic, or description",
+        "description": {},
+        "url": {
+          "path": [
+            "instances",
+            "search"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "q",
+              "value": "<string>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "count",
+              "value": "20"
+            },
+            {
+              "disabled": false,
+              "key": "name",
+              "value": "false",
+              "description": "Only search through instance names."
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3c810f3e-2448-4ebc-8825-5c165d80a543",
+          "name": "Search results.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "instances",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "key": "count",
+                  "value": "20"
+                },
+                {
+                  "key": "name",
+                  "value": "false"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "de07b955-777d-4ec1-89d1-9ff2e7683971",
+      "name": "Show information about a specific instance",
+      "request": {
+        "name": "Show information about a specific instance",
+        "description": {},
+        "url": {
+          "path": [
+            "instances",
+            "show"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "name",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "818767ef-799e-496f-b489-a01fab185125",
+          "name": "Instance details.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "instances",
+                "show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f551d77d-27b7-421f-b48c-93f24720a6af",
+      "name": "List Mastodon versions seen across the network",
+      "request": {
+        "name": "List Mastodon versions seen across the network",
+        "description": {},
+        "url": {
+          "path": [
+            "versions",
+            "list"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "count",
+              "value": "20"
+            },
+            {
+              "disabled": false,
+              "key": "include_specials",
+              "value": "true"
+            },
+            {
+              "disabled": false,
+              "key": "include_unused",
+              "value": "true"
+            },
+            {
+              "disabled": false,
+              "key": "min_id",
+              "value": "<integer>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "ac23f1dd-baaf-45c6-a086-fb9abb99a375",
+          "name": "Versions list.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "versions",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "count",
+                  "value": "20"
+                },
+                {
+                  "key": "include_specials",
+                  "value": "true"
+                },
+                {
+                  "key": "include_unused",
+                  "value": "true"
+                },
+                {
+                  "key": "min_id",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "b3ccada1-77f4-4fdc-bc85-54ff19f5c025",
+      "name": "Show information about a specific Mastodon version",
+      "request": {
+        "name": "Show information about a specific Mastodon version",
+        "description": {},
+        "url": {
+          "path": [
+            "versions",
+            "show"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "id",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "6d808443-c775-4cb9-b46d-4861a39ba51f",
+          "name": "Version details.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "versions",
+                "show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://instances.social/api/1.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ce7df805-2ee7-45bd-acd8-71fe9e527328",
+    "name": "Mastodon Instances API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The instances.social API allows searching for and retrieving information\nabout Mastodon server instances, including user counts, language,\nsoftware version, uptime statistics, content moderation policies, and\nsupported features.\n\n\nContact Support:\n Name: instances.social",
+      "type": "text/plain"
+    }
+  }
+}

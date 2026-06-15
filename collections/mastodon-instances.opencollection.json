@@ -1,0 +1,232 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mastodon Instances API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get a random sample of instances",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://instances.social/api/1.0/instances/sample",
+        "params": [
+          {
+            "name": "count",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "include_dead",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get a random sample of instances"
+    },
+    {
+      "info": {
+        "name": "List instances with rich filtering",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://instances.social/api/1.0/instances/list",
+        "params": [
+          {
+            "name": "count",
+            "value": "",
+            "type": "query",
+            "description": "0 returns all instances."
+          },
+          {
+            "name": "include_dead",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "include_down",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "include_closed",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "supported_features",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of required features."
+          },
+          {
+            "name": "min_version",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "min_users",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "max_users",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "min_active_users",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "category",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "language",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "prohibited_content",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "allowed_content",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "min_id",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "sort_by",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "sort_order",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List instances with rich filtering"
+    },
+    {
+      "info": {
+        "name": "Search instances by name, topic, or description",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://instances.social/api/1.0/instances/search",
+        "params": [
+          {
+            "name": "q",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "count",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "name",
+            "value": "",
+            "type": "query",
+            "description": "Only search through instance names."
+          }
+        ]
+      },
+      "docs": "Search instances by name, topic, or description"
+    },
+    {
+      "info": {
+        "name": "Show information about a specific instance",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://instances.social/api/1.0/instances/show",
+        "params": [
+          {
+            "name": "name",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Show information about a specific instance"
+    },
+    {
+      "info": {
+        "name": "List Mastodon versions seen across the network",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://instances.social/api/1.0/versions/list",
+        "params": [
+          {
+            "name": "count",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "include_specials",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "include_unused",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "min_id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List Mastodon versions seen across the network"
+    },
+    {
+      "info": {
+        "name": "Show information about a specific Mastodon version",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://instances.social/api/1.0/versions/show",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Show information about a specific Mastodon version"
+    }
+  ],
+  "bundled": true
+}
