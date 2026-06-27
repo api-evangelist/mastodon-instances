@@ -36,7 +36,7 @@ apis:
 common:
   - type: Portal
     url: https://instances.social
-  - type: SignUp
+  - type: Signup
     url: https://instances.social/api/token
 maintainers:
   - FN: Kin Lane
