@@ -34,6 +34,10 @@ apis:
       about Mastodon server instances, including user counts, language, software
       version, and uptime statistics.
 common:
+  - type: DomainSecurity
+    url: security/mastodon-instances-domain-security.yml
+  - type: Authentication
+    url: authentication/mastodon-instances-authentication.yml
   - type: Portal
     url: https://instances.social
   - type: Signup
