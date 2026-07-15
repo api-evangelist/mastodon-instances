@@ -34,6 +34,8 @@ apis:
       about Mastodon server instances, including user counts, language, software
       version, and uptime statistics.
 common:
+  - type: AgenticAccess
+    url: agentic-access/mastodon-instances-agentic-access.yml
   - type: DomainSecurity
     url: security/mastodon-instances-domain-security.yml
   - type: Authentication
