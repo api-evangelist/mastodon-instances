@@ -1,0 +1,80 @@
+openapi: 3.1.0
+info:
+  title: Mastodon Instances Versions API
+  version: 1.0.0
+  description: 'The instances.social API allows searching for and retrieving information
+
+    about Mastodon server instances, including user counts, language,
+
+    software version, uptime statistics, content moderation policies, and
+
+    supported features.
+
+    '
+  contact:
+    name: instances.social
+    url: https://instances.social
+servers:
+- url: https://instances.social/api/1.0
+  description: Production
+security:
+- BearerAuth: []
+tags:
+- name: Versions
+paths:
+  /versions/list:
+    get:
+      summary: List Mastodon versions seen across the network
+      operationId: listVersions
+      parameters:
+      - in: query
+        name: count
+        schema:
+          type: integer
+          minimum: 0
+          maximum: 10000
+          default: 20
+      - in: query
+        name: include_specials
+        schema:
+          type: boolean
+          default: true
+      - in: query
+        name: include_unused
+        schema:
+          type: boolean
+          default: true
+      - in: query
+        name: min_id
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Versions list.
+      tags:
+      - Versions
+  /versions/show:
+    get:
+      summary: Show information about a specific Mastodon version
+      operationId: showVersion
+      parameters:
+      - in: query
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Version details.
+      tags:
+      - Versions
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'API token obtained from https://instances.social/api/token,
+
+        passed as `Authorization: Bearer {token}`.
+
+        '
