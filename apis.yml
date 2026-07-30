@@ -6,7 +6,20 @@ description: >-
   including language, user count, and stability, and to retrieve metadata about
   specific instances.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mastodon-instances.png
 url: >-
   https://raw.githubusercontent.com/api-evangelist/mastodon-instances/refs/heads/main/apis.yml
 tags:
@@ -18,21 +31,40 @@ created: '2024-12-02'
 modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
-  - aid: mastodon-instances:mastodon-instances
-    name: Mastodon Instances API
-    tags:
-      - Mastodon
-      - Search
-      - Social
-    humanURL: https://instances.social
-    baseURL: https://instances.social/api
-    properties:
-      - url: https://instances.social/api/doc/
-        type: Documentation
-    description: >-
-      The instances.social API allows searching for and retrieving information
-      about Mastodon server instances, including user counts, language, software
-      version, and uptime statistics.
+- aid: mastodon-instances:mastodon-instances
+  name: Mastodon Instances API
+  tags:
+  - Mastodon
+  - Search
+  - Social
+  humanURL: https://instances.social
+  baseURL: https://instances.social/api
+  properties:
+  - url: https://instances.social/api/doc/
+    type: Documentation
+  description: >-
+    The instances.social API allows searching for and retrieving information about Mastodon server instances,
+    including user counts, language, software version, and uptime statistics.
+- aid: mastodon-instances:mastodon-instances-instances-api
+  name: Mastodon Instances Instances API
+  description: The Instances API from Mastodon Instances — 4 operation(s) for instances.
+  humanURL: https://instances.social
+  baseURL: https://instances.social/api
+  tags:
+  - Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/mastodon-instances-instances-api-openapi.yml
+- aid: mastodon-instances:mastodon-instances-versions-api
+  name: Mastodon Instances Versions API
+  description: The Versions API from Mastodon Instances — 2 operation(s) for versions.
+  humanURL: https://instances.social
+  baseURL: https://instances.social/api
+  tags:
+  - Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/mastodon-instances-versions-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/mastodon-instances-agentic-access.yml
