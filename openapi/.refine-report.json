@@ -1,0 +1,16 @@
+{
+  "provider": "mastodon-instances",
+  "sources": [
+    "mastodon-instances-instances-api-openapi.yml",
+    "mastodon-instances-versions-api-openapi.yml"
+  ],
+  "outputs": [
+    "mastodon-instances-instances-api-openapi.yml",
+    "mastodon-instances-versions-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
