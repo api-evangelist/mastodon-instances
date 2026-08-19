@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Mastodon Instances Versions API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Versions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Mastodon versions seen across the network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://instances.social/api/1.0/versions/list",
+            "params": [
+              {
+                "name": "count",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_specials",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_unused",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "min_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List Mastodon versions seen across the network"
+        },
+        {
+          "info": {
+            "name": "Show information about a specific Mastodon version",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://instances.social/api/1.0/versions/show",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Show information about a specific Mastodon version"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
