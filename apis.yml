@@ -79,6 +79,8 @@ apis:
   - type: OpenAPI
     url: openapi/mastodon-instances-versions-api-openapi.yml
 common:
+  - type: Website
+    url: https://instances.social/
   - type: AgenticAccess
     url: agentic-access/mastodon-instances-agentic-access.yml
   - type: DomainSecurity
