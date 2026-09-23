@@ -1,8 +1,7 @@
 {
   "provider": "mastodon-instances",
   "sources": [
-    "mastodon-instances-instances-api-openapi.yml",
-    "mastodon-instances-versions-api-openapi.yml"
+    "_original/mastodon-instances-openapi.yml"
   ],
   "outputs": [
     "mastodon-instances-instances-api-openapi.yml",
@@ -11,6 +10,21 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "mastodon-instances-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "mastodon-instances-openapi.yml: tagged paths GET /instances/sample -> Instances",
+    "mastodon-instances-openapi.yml: tagged paths GET /instances/list -> Instances",
+    "mastodon-instances-openapi.yml: tagged paths GET /instances/search -> Instances",
+    "mastodon-instances-openapi.yml: tagged paths GET /instances/show -> Instances",
+    "mastodon-instances-openapi.yml: tagged paths GET /versions/list -> Versions",
+    "mastodon-instances-openapi.yml: tagged paths GET /versions/show -> Versions",
+    "mastodon-instances-openapi.yml: declared missing tag: Instances",
+    "mastodon-instances-openapi.yml: declared missing tag: Versions",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "mastodon-instances-instances-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mastodon-instances-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
